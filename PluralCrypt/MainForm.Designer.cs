@@ -28,555 +28,492 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
-            this.lsvCourse = new System.Windows.Forms.ListView();
-            this.imgList = new System.Windows.Forms.ImageList(this.components);
-            this.btnReadCourse = new System.Windows.Forms.Button();
-            this.btnDecypt = new System.Windows.Forms.Button();
-            this.txtCoursePath = new System.Windows.Forms.TextBox();
-            this.txtDBPath = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.btnCoursePath = new System.Windows.Forms.Button();
-            this.btnDBPath = new System.Windows.Forms.Button();
-            this.pnlOption = new System.Windows.Forms.Panel();
-            this.chkCopyImage = new System.Windows.Forms.CheckBox();
-            this.btnDeselectAll = new System.Windows.Forms.Button();
-            this.btnSelectAll = new System.Windows.Forms.Button();
-            this.chkShowErrOnly = new System.Windows.Forms.CheckBox();
-            this.chkStartModuleIndexAt1 = new System.Windows.Forms.CheckBox();
-            this.chkStartClipIndexAt1 = new System.Windows.Forms.CheckBox();
-            this.btnOpenOutput = new System.Windows.Forms.Button();
-            this.btnOpenDB = new System.Windows.Forms.Button();
-            this.chkDecrypt = new System.Windows.Forms.CheckBox();
-            this.chkDelete = new System.Windows.Forms.CheckBox();
-            this.chkCreateSub = new System.Windows.Forms.CheckBox();
-            this.btnOutput = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
-            this.txtOutputPath = new System.Windows.Forms.TextBox();
-            this.pnlMain = new System.Windows.Forms.Panel();
-            this.pnlCourse = new System.Windows.Forms.Panel();
-            this.rtbLog = new System.Windows.Forms.RichTextBox();
-            this.bgwDecrypt = new System.ComponentModel.BackgroundWorker();
-            this.bgwGetCourse = new System.ComponentModel.BackgroundWorker();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
-            this.tslToolVersion = new System.Windows.Forms.ToolStripStatusLabel();
-            this.tslPOPVersion = new System.Windows.Forms.ToolStripStatusLabel();
-            this.pnl1 = new System.Windows.Forms.Panel();
-            this.pnl2 = new System.Windows.Forms.Panel();
-            this.tlsHelp = new System.Windows.Forms.ToolStripDropDownButton();
-            this.pnlOption.SuspendLayout();
-            this.pnlMain.SuspendLayout();
-            this.pnlCourse.SuspendLayout();
-            this.tableLayoutPanel1.SuspendLayout();
-            this.panel1.SuspendLayout();
-            this.statusStrip1.SuspendLayout();
-            this.pnl1.SuspendLayout();
-            this.pnl2.SuspendLayout();
-            this.SuspendLayout();
-            // 
-            // lsvCourse
-            // 
-            this.lsvCourse.Activation = System.Windows.Forms.ItemActivation.OneClick;
-            this.lsvCourse.BackColor = System.Drawing.SystemColors.Control;
-            this.lsvCourse.CheckBoxes = true;
-            this.lsvCourse.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lsvCourse.HideSelection = false;
-            this.lsvCourse.Location = new System.Drawing.Point(0, 0);
-            this.lsvCourse.Margin = new System.Windows.Forms.Padding(4);
-            this.lsvCourse.MultiSelect = false;
-            this.lsvCourse.Name = "lsvCourse";
-            this.lsvCourse.Size = new System.Drawing.Size(868, 355);
-            this.lsvCourse.TabIndex = 0;
-            this.lsvCourse.UseCompatibleStateImageBehavior = false;
-            this.lsvCourse.ItemActivate += new System.EventHandler(this.lsvCourse_ItemActivate);
-            // 
-            // imgList
-            // 
-            this.imgList.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
-            this.imgList.ImageSize = new System.Drawing.Size(16, 16);
-            this.imgList.TransparentColor = System.Drawing.Color.Transparent;
-            // 
-            // btnReadCourse
-            // 
-            this.btnReadCourse.Location = new System.Drawing.Point(88, 116);
-            this.btnReadCourse.Margin = new System.Windows.Forms.Padding(4);
-            this.btnReadCourse.Name = "btnReadCourse";
-            this.btnReadCourse.Size = new System.Drawing.Size(112, 26);
-            this.btnReadCourse.TabIndex = 12;
-            this.btnReadCourse.Text = "Read course";
-            this.btnReadCourse.UseVisualStyleBackColor = true;
-            this.btnReadCourse.Click += new System.EventHandler(this.btnReadCourse_Click);
-            // 
-            // btnDecypt
-            // 
-            this.btnDecypt.Location = new System.Drawing.Point(396, 116);
-            this.btnDecypt.Margin = new System.Windows.Forms.Padding(4);
-            this.btnDecypt.Name = "btnDecypt";
-            this.btnDecypt.Size = new System.Drawing.Size(112, 26);
-            this.btnDecypt.TabIndex = 15;
-            this.btnDecypt.Text = "Run";
-            this.btnDecypt.UseVisualStyleBackColor = true;
-            this.btnDecypt.Click += new System.EventHandler(this.btnDecrypt_Click);
-            // 
-            // txtCoursePath
-            // 
-            this.txtCoursePath.Location = new System.Drawing.Point(88, 13);
-            this.txtCoursePath.Margin = new System.Windows.Forms.Padding(4);
-            this.txtCoursePath.Name = "txtCoursePath";
-            this.txtCoursePath.Size = new System.Drawing.Size(381, 23);
-            this.txtCoursePath.TabIndex = 0;
-            // 
-            // txtDBPath
-            // 
-            this.txtDBPath.Location = new System.Drawing.Point(88, 49);
-            this.txtDBPath.Margin = new System.Windows.Forms.Padding(4);
-            this.txtDBPath.Name = "txtDBPath";
-            this.txtDBPath.Size = new System.Drawing.Size(381, 23);
-            this.txtDBPath.TabIndex = 1;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(4, 17);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(71, 15);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "Course path";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(24, 53);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(49, 15);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "DB path";
-            // 
-            // btnCoursePath
-            // 
-            this.btnCoursePath.Location = new System.Drawing.Point(476, 11);
-            this.btnCoursePath.Margin = new System.Windows.Forms.Padding(4);
-            this.btnCoursePath.Name = "btnCoursePath";
-            this.btnCoursePath.Size = new System.Drawing.Size(77, 26);
-            this.btnCoursePath.TabIndex = 3;
-            this.btnCoursePath.Text = "Browse ....";
-            this.btnCoursePath.UseVisualStyleBackColor = true;
-            this.btnCoursePath.Click += new System.EventHandler(this.btnCoursePath_Click);
-            // 
-            // btnDBPath
-            // 
-            this.btnDBPath.Location = new System.Drawing.Point(476, 47);
-            this.btnDBPath.Margin = new System.Windows.Forms.Padding(4);
-            this.btnDBPath.Name = "btnDBPath";
-            this.btnDBPath.Size = new System.Drawing.Size(77, 26);
-            this.btnDBPath.TabIndex = 4;
-            this.btnDBPath.Text = "Browse ....";
-            this.btnDBPath.UseVisualStyleBackColor = true;
-            this.btnDBPath.Click += new System.EventHandler(this.btnDBPath_Click);
-            // 
-            // pnlOption
-            // 
-            this.pnlOption.Controls.Add(this.chkCopyImage);
-            this.pnlOption.Controls.Add(this.btnDeselectAll);
-            this.pnlOption.Controls.Add(this.btnSelectAll);
-            this.pnlOption.Controls.Add(this.chkShowErrOnly);
-            this.pnlOption.Controls.Add(this.chkStartModuleIndexAt1);
-            this.pnlOption.Controls.Add(this.chkStartClipIndexAt1);
-            this.pnlOption.Controls.Add(this.btnOpenOutput);
-            this.pnlOption.Controls.Add(this.btnOpenDB);
-            this.pnlOption.Controls.Add(this.chkDecrypt);
-            this.pnlOption.Controls.Add(this.chkDelete);
-            this.pnlOption.Controls.Add(this.chkCreateSub);
-            this.pnlOption.Controls.Add(this.btnDecypt);
-            this.pnlOption.Controls.Add(this.btnOutput);
-            this.pnlOption.Controls.Add(this.btnReadCourse);
-            this.pnlOption.Controls.Add(this.label3);
-            this.pnlOption.Controls.Add(this.txtOutputPath);
-            this.pnlOption.Controls.Add(this.btnCoursePath);
-            this.pnlOption.Controls.Add(this.btnDBPath);
-            this.pnlOption.Controls.Add(this.txtCoursePath);
-            this.pnlOption.Controls.Add(this.label2);
-            this.pnlOption.Controls.Add(this.txtDBPath);
-            this.pnlOption.Controls.Add(this.label1);
-            this.pnlOption.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnlOption.Location = new System.Drawing.Point(0, 355);
-            this.pnlOption.Margin = new System.Windows.Forms.Padding(4);
-            this.pnlOption.MinimumSize = new System.Drawing.Size(817, 125);
-            this.pnlOption.Name = "pnlOption";
-            this.pnlOption.Size = new System.Drawing.Size(868, 153);
-            this.pnlOption.TabIndex = 1;
-            // 
-            // chkCopyImage
-            // 
-            this.chkCopyImage.AutoSize = true;
-            this.chkCopyImage.Location = new System.Drawing.Point(693, 52);
-            this.chkCopyImage.Margin = new System.Windows.Forms.Padding(4);
-            this.chkCopyImage.Name = "chkCopyImage";
-            this.chkCopyImage.Size = new System.Drawing.Size(90, 19);
-            this.chkCopyImage.TabIndex = 18;
-            this.chkCopyImage.Text = "Copy Image";
-            this.toolTip1.SetToolTip(this.chkCopyImage, "Copy course picture to the decrypted folder");
-            this.chkCopyImage.UseVisualStyleBackColor = true;
-            // 
-            // btnDeselectAll
-            // 
-            this.btnDeselectAll.Location = new System.Drawing.Point(301, 116);
-            this.btnDeselectAll.Margin = new System.Windows.Forms.Padding(4);
-            this.btnDeselectAll.Name = "btnDeselectAll";
-            this.btnDeselectAll.Size = new System.Drawing.Size(88, 26);
-            this.btnDeselectAll.TabIndex = 14;
-            this.btnDeselectAll.Text = "Deselect all";
-            this.btnDeselectAll.UseVisualStyleBackColor = true;
-            this.btnDeselectAll.Click += new System.EventHandler(this.btnDeselectAll_Click);
-            // 
-            // btnSelectAll
-            // 
-            this.btnSelectAll.Location = new System.Drawing.Point(206, 116);
-            this.btnSelectAll.Margin = new System.Windows.Forms.Padding(4);
-            this.btnSelectAll.Name = "btnSelectAll";
-            this.btnSelectAll.Size = new System.Drawing.Size(88, 26);
-            this.btnSelectAll.TabIndex = 13;
-            this.btnSelectAll.Text = "Select all";
-            this.btnSelectAll.UseVisualStyleBackColor = true;
-            this.btnSelectAll.Click += new System.EventHandler(this.btnSelectAll_Click);
-            // 
-            // chkShowErrOnly
-            // 
-            this.chkShowErrOnly.AutoSize = true;
-            this.chkShowErrOnly.Location = new System.Drawing.Point(570, 52);
-            this.chkShowErrOnly.Margin = new System.Windows.Forms.Padding(4);
-            this.chkShowErrOnly.Name = "chkShowErrOnly";
-            this.chkShowErrOnly.Size = new System.Drawing.Size(109, 19);
-            this.chkShowErrOnly.TabIndex = 9;
-            this.chkShowErrOnly.Text = "Show error only";
-            this.toolTip1.SetToolTip(this.chkShowErrOnly, "Show error only in the log panel");
-            this.chkShowErrOnly.UseVisualStyleBackColor = true;
-            // 
-            // chkStartModuleIndexAt1
-            // 
-            this.chkStartModuleIndexAt1.AutoSize = true;
-            this.chkStartModuleIndexAt1.Checked = true;
-            this.chkStartModuleIndexAt1.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chkStartModuleIndexAt1.Location = new System.Drawing.Point(693, 89);
-            this.chkStartModuleIndexAt1.Margin = new System.Windows.Forms.Padding(4);
-            this.chkStartModuleIndexAt1.Name = "chkStartModuleIndexAt1";
-            this.chkStartModuleIndexAt1.Size = new System.Drawing.Size(121, 19);
-            this.chkStartModuleIndexAt1.TabIndex = 11;
-            this.chkStartModuleIndexAt1.Text = "Module index at 1";
-            this.toolTip1.SetToolTip(this.chkStartModuleIndexAt1, "Module index starts at 1 instead of 0");
-            this.chkStartModuleIndexAt1.UseVisualStyleBackColor = true;
-            // 
-            // chkStartClipIndexAt1
-            // 
-            this.chkStartClipIndexAt1.AutoSize = true;
-            this.chkStartClipIndexAt1.Checked = true;
-            this.chkStartClipIndexAt1.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chkStartClipIndexAt1.Location = new System.Drawing.Point(570, 89);
-            this.chkStartClipIndexAt1.Margin = new System.Windows.Forms.Padding(4);
-            this.chkStartClipIndexAt1.Name = "chkStartClipIndexAt1";
-            this.chkStartClipIndexAt1.Size = new System.Drawing.Size(101, 19);
-            this.chkStartClipIndexAt1.TabIndex = 10;
-            this.chkStartClipIndexAt1.Text = "Clip index at 1";
-            this.toolTip1.SetToolTip(this.chkStartClipIndexAt1, "Clip index starts at 1 instead of 0");
-            this.chkStartClipIndexAt1.UseVisualStyleBackColor = true;
-            // 
-            // btnOpenOutput
-            // 
-            this.btnOpenOutput.Location = new System.Drawing.Point(518, 116);
-            this.btnOpenOutput.Margin = new System.Windows.Forms.Padding(4);
-            this.btnOpenOutput.Name = "btnOpenOutput";
-            this.btnOpenOutput.Size = new System.Drawing.Size(126, 26);
-            this.btnOpenOutput.TabIndex = 16;
-            this.btnOpenOutput.Text = "Open output folder";
-            this.btnOpenOutput.UseVisualStyleBackColor = true;
-            this.btnOpenOutput.Click += new System.EventHandler(this.btnOpenOutput_Click);
-            // 
-            // btnOpenDB
-            // 
-            this.btnOpenDB.Location = new System.Drawing.Point(651, 116);
-            this.btnOpenDB.Margin = new System.Windows.Forms.Padding(4);
-            this.btnOpenDB.Name = "btnOpenDB";
-            this.btnOpenDB.Size = new System.Drawing.Size(112, 26);
-            this.btnOpenDB.TabIndex = 17;
-            this.btnOpenDB.Text = "Open DB folder";
-            this.btnOpenDB.UseVisualStyleBackColor = true;
-            this.btnOpenDB.Click += new System.EventHandler(this.btnOpenDB_Click);
-            // 
-            // chkDecrypt
-            // 
-            this.chkDecrypt.AutoSize = true;
-            this.chkDecrypt.Checked = true;
-            this.chkDecrypt.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chkDecrypt.Location = new System.Drawing.Point(570, 16);
-            this.chkDecrypt.Margin = new System.Windows.Forms.Padding(4);
-            this.chkDecrypt.Name = "chkDecrypt";
-            this.chkDecrypt.Size = new System.Drawing.Size(67, 19);
-            this.chkDecrypt.TabIndex = 6;
-            this.chkDecrypt.Text = "Decrypt";
-            this.chkDecrypt.UseVisualStyleBackColor = true;
-            // 
-            // chkDelete
-            // 
-            this.chkDelete.AutoSize = true;
-            this.chkDelete.Checked = true;
-            this.chkDelete.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chkDelete.Location = new System.Drawing.Point(798, 16);
-            this.chkDelete.Margin = new System.Windows.Forms.Padding(4);
-            this.chkDelete.Name = "chkDelete";
-            this.chkDelete.Size = new System.Drawing.Size(59, 19);
-            this.chkDelete.TabIndex = 8;
-            this.chkDelete.Text = "Delete";
-            this.chkDelete.UseVisualStyleBackColor = true;
-            // 
-            // chkCreateSub
-            // 
-            this.chkCreateSub.AutoSize = true;
-            this.chkCreateSub.Checked = true;
-            this.chkCreateSub.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chkCreateSub.Location = new System.Drawing.Point(693, 16);
-            this.chkCreateSub.Margin = new System.Windows.Forms.Padding(4);
-            this.chkCreateSub.Name = "chkCreateSub";
-            this.chkCreateSub.Size = new System.Drawing.Size(82, 19);
-            this.chkCreateSub.TabIndex = 7;
-            this.chkCreateSub.Text = "Create sub";
-            this.chkCreateSub.UseVisualStyleBackColor = true;
-            // 
-            // btnOutput
-            // 
-            this.btnOutput.Location = new System.Drawing.Point(476, 85);
-            this.btnOutput.Margin = new System.Windows.Forms.Padding(4);
-            this.btnOutput.Name = "btnOutput";
-            this.btnOutput.Size = new System.Drawing.Size(77, 26);
-            this.btnOutput.TabIndex = 5;
-            this.btnOutput.Text = "Browse ....";
-            this.btnOutput.UseVisualStyleBackColor = true;
-            this.btnOutput.Click += new System.EventHandler(this.btnOutput_Click);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(33, 91);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(45, 15);
-            this.label3.TabIndex = 11;
-            this.label3.Text = "Output";
-            // 
-            // txtOutputPath
-            // 
-            this.txtOutputPath.Location = new System.Drawing.Point(88, 86);
-            this.txtOutputPath.Margin = new System.Windows.Forms.Padding(4);
-            this.txtOutputPath.Name = "txtOutputPath";
-            this.txtOutputPath.Size = new System.Drawing.Size(381, 23);
-            this.txtOutputPath.TabIndex = 2;
-            // 
-            // pnlMain
-            // 
-            this.pnlMain.Controls.Add(this.pnlCourse);
-            this.pnlMain.Controls.Add(this.pnlOption);
-            this.pnlMain.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlMain.Location = new System.Drawing.Point(4, 4);
-            this.pnlMain.Margin = new System.Windows.Forms.Padding(4);
-            this.pnlMain.MinimumSize = new System.Drawing.Size(0, 496);
-            this.pnlMain.Name = "pnlMain";
-            this.pnlMain.Size = new System.Drawing.Size(868, 508);
-            this.pnlMain.TabIndex = 12;
-            // 
-            // pnlCourse
-            // 
-            this.pnlCourse.Controls.Add(this.lsvCourse);
-            this.pnlCourse.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlCourse.Location = new System.Drawing.Point(0, 0);
-            this.pnlCourse.Margin = new System.Windows.Forms.Padding(4);
-            this.pnlCourse.Name = "pnlCourse";
-            this.pnlCourse.Size = new System.Drawing.Size(868, 355);
-            this.pnlCourse.TabIndex = 11;
-            // 
-            // rtbLog
-            // 
-            this.rtbLog.BackColor = System.Drawing.Color.Black;
-            this.rtbLog.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.rtbLog.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.rtbLog.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.rtbLog.ForeColor = System.Drawing.SystemColors.Info;
-            this.rtbLog.Location = new System.Drawing.Point(0, 0);
-            this.rtbLog.Margin = new System.Windows.Forms.Padding(4);
-            this.rtbLog.Name = "rtbLog";
-            this.rtbLog.ReadOnly = true;
-            this.rtbLog.ShortcutsEnabled = false;
-            this.rtbLog.ShowSelectionMargin = true;
-            this.rtbLog.Size = new System.Drawing.Size(466, 510);
-            this.rtbLog.TabIndex = 1;
-            this.rtbLog.TabStop = false;
-            this.rtbLog.Text = "";
-            // 
-            // bgwDecrypt
-            // 
-            this.bgwDecrypt.WorkerReportsProgress = true;
-            this.bgwDecrypt.WorkerSupportsCancellation = true;
-            // 
-            // bgwGetCourse
-            // 
-            this.bgwGetCourse.WorkerReportsProgress = true;
-            this.bgwGetCourse.WorkerSupportsCancellation = true;
-            // 
-            // tableLayoutPanel1
-            // 
-            this.tableLayoutPanel1.ColumnCount = 2;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 876F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel1.Controls.Add(this.pnlMain, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.panel1, 1, 0);
-            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 1;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1348, 516);
-            this.tableLayoutPanel1.TabIndex = 13;
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.rtbLog);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(879, 3);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(466, 510);
-            this.panel1.TabIndex = 13;
-            // 
-            // statusStrip1
-            // 
-            this.statusStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
-            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+			this.components = new System.ComponentModel.Container();
+			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
+			this.courseListView = new System.Windows.Forms.ListView();
+			this.imgList = new System.Windows.Forms.ImageList(this.components);
+			this.readButton = new System.Windows.Forms.Button();
+			this.runButton = new System.Windows.Forms.Button();
+			this.coursePathTextBox = new System.Windows.Forms.TextBox();
+			this.dbPathTextBox = new System.Windows.Forms.TextBox();
+			this.label1 = new System.Windows.Forms.Label();
+			this.label2 = new System.Windows.Forms.Label();
+			this.coursePathButton = new System.Windows.Forms.Button();
+			this.dbPathButton = new System.Windows.Forms.Button();
+			this.optionPanel = new System.Windows.Forms.Panel();
+			this.copyImageCheckbox = new System.Windows.Forms.CheckBox();
+			this.deselectAllButton = new System.Windows.Forms.Button();
+			this.selectAllButton = new System.Windows.Forms.Button();
+			this.openOutputButton = new System.Windows.Forms.Button();
+			this.openDbButton = new System.Windows.Forms.Button();
+			this.deleteCheckBox = new System.Windows.Forms.CheckBox();
+			this.createSubCheckBox = new System.Windows.Forms.CheckBox();
+			this.outputButton = new System.Windows.Forms.Button();
+			this.label3 = new System.Windows.Forms.Label();
+			this.outputPathTextBox = new System.Windows.Forms.TextBox();
+			this.pnlMain = new System.Windows.Forms.Panel();
+			this.pnlCourse = new System.Windows.Forms.Panel();
+			this.logRichTextBox = new System.Windows.Forms.RichTextBox();
+			this.bgwDecrypt = new System.ComponentModel.BackgroundWorker();
+			this.bgwGetCourse = new System.ComponentModel.BackgroundWorker();
+			this.formLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
+			this.panel1 = new System.Windows.Forms.Panel();
+			this.formToolTip = new System.Windows.Forms.ToolTip(this.components);
+			this.bottomStatusStrip = new System.Windows.Forms.StatusStrip();
+			this.tslToolVersion = new System.Windows.Forms.ToolStripStatusLabel();
+			this.tslPOPVersion = new System.Windows.Forms.ToolStripStatusLabel();
+			this.pnl1 = new System.Windows.Forms.Panel();
+			this.pnl2 = new System.Windows.Forms.Panel();
+			this.tlsHelp = new System.Windows.Forms.ToolStripDropDownButton();
+			this.optionPanel.SuspendLayout();
+			this.pnlMain.SuspendLayout();
+			this.pnlCourse.SuspendLayout();
+			this.formLayoutPanel.SuspendLayout();
+			this.panel1.SuspendLayout();
+			this.bottomStatusStrip.SuspendLayout();
+			this.pnl1.SuspendLayout();
+			this.pnl2.SuspendLayout();
+			this.SuspendLayout();
+			// 
+			// courseListView
+			// 
+			this.courseListView.Activation = System.Windows.Forms.ItemActivation.OneClick;
+			this.courseListView.BackColor = System.Drawing.SystemColors.Control;
+			this.courseListView.CheckBoxes = true;
+			this.courseListView.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.courseListView.HideSelection = false;
+			this.courseListView.Location = new System.Drawing.Point(0, 0);
+			this.courseListView.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
+			this.courseListView.MultiSelect = false;
+			this.courseListView.Name = "courseListView";
+			this.courseListView.Size = new System.Drawing.Size(1233, 572);
+			this.courseListView.TabIndex = 0;
+			this.courseListView.UseCompatibleStateImageBehavior = false;
+			this.courseListView.ItemActivate += new System.EventHandler(this.courseListView_ItemActivate);
+			// 
+			// imgList
+			// 
+			this.imgList.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
+			this.imgList.ImageSize = new System.Drawing.Size(16, 16);
+			this.imgList.TransparentColor = System.Drawing.Color.Transparent;
+			// 
+			// readButton
+			// 
+			this.readButton.Location = new System.Drawing.Point(1073, 60);
+			this.readButton.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
+			this.readButton.Name = "readButton";
+			this.readButton.Size = new System.Drawing.Size(110, 31);
+			this.readButton.TabIndex = 12;
+			this.readButton.Text = "Read";
+			this.readButton.UseVisualStyleBackColor = true;
+			this.readButton.Click += new System.EventHandler(this.readButton_Click);
+			// 
+			// runButton
+			// 
+			this.runButton.Location = new System.Drawing.Point(1073, 105);
+			this.runButton.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
+			this.runButton.Name = "runButton";
+			this.runButton.Size = new System.Drawing.Size(110, 31);
+			this.runButton.TabIndex = 15;
+			this.runButton.Text = "Run";
+			this.runButton.UseVisualStyleBackColor = true;
+			this.runButton.Click += new System.EventHandler(this.runButton_Click);
+			// 
+			// coursePathTextBox
+			// 
+			this.coursePathTextBox.Location = new System.Drawing.Point(157, 15);
+			this.coursePathTextBox.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
+			this.coursePathTextBox.Name = "coursePathTextBox";
+			this.coursePathTextBox.Size = new System.Drawing.Size(543, 31);
+			this.coursePathTextBox.TabIndex = 0;
+			// 
+			// dbPathTextBox
+			// 
+			this.dbPathTextBox.Location = new System.Drawing.Point(157, 60);
+			this.dbPathTextBox.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
+			this.dbPathTextBox.Name = "dbPathTextBox";
+			this.dbPathTextBox.Size = new System.Drawing.Size(543, 31);
+			this.dbPathTextBox.TabIndex = 1;
+			// 
+			// label1
+			// 
+			this.label1.AutoSize = true;
+			this.label1.Location = new System.Drawing.Point(41, 15);
+			this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+			this.label1.Name = "label1";
+			this.label1.Size = new System.Drawing.Size(112, 25);
+			this.label1.TabIndex = 5;
+			this.label1.Text = "Course path:";
+			// 
+			// label2
+			// 
+			this.label2.AutoSize = true;
+			this.label2.Location = new System.Drawing.Point(65, 63);
+			this.label2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+			this.label2.Name = "label2";
+			this.label2.Size = new System.Drawing.Size(80, 25);
+			this.label2.TabIndex = 6;
+			this.label2.Text = "DB path:";
+			// 
+			// coursePathButton
+			// 
+			this.coursePathButton.Location = new System.Drawing.Point(712, 15);
+			this.coursePathButton.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
+			this.coursePathButton.Name = "coursePathButton";
+			this.coursePathButton.Size = new System.Drawing.Size(110, 31);
+			this.coursePathButton.TabIndex = 3;
+			this.coursePathButton.Text = "Browse...";
+			this.coursePathButton.UseVisualStyleBackColor = true;
+			this.coursePathButton.Click += new System.EventHandler(this.coursePathButton_Click);
+			// 
+			// dbPathButton
+			// 
+			this.dbPathButton.Location = new System.Drawing.Point(712, 60);
+			this.dbPathButton.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
+			this.dbPathButton.Name = "dbPathButton";
+			this.dbPathButton.Size = new System.Drawing.Size(110, 31);
+			this.dbPathButton.TabIndex = 4;
+			this.dbPathButton.Text = "Browse...";
+			this.dbPathButton.UseVisualStyleBackColor = true;
+			this.dbPathButton.Click += new System.EventHandler(this.dbPathButton_Click);
+			// 
+			// optionPanel
+			// 
+			this.optionPanel.Controls.Add(this.copyImageCheckbox);
+			this.optionPanel.Controls.Add(this.deselectAllButton);
+			this.optionPanel.Controls.Add(this.selectAllButton);
+			this.optionPanel.Controls.Add(this.openOutputButton);
+			this.optionPanel.Controls.Add(this.openDbButton);
+			this.optionPanel.Controls.Add(this.deleteCheckBox);
+			this.optionPanel.Controls.Add(this.createSubCheckBox);
+			this.optionPanel.Controls.Add(this.runButton);
+			this.optionPanel.Controls.Add(this.outputButton);
+			this.optionPanel.Controls.Add(this.readButton);
+			this.optionPanel.Controls.Add(this.label3);
+			this.optionPanel.Controls.Add(this.outputPathTextBox);
+			this.optionPanel.Controls.Add(this.coursePathButton);
+			this.optionPanel.Controls.Add(this.dbPathButton);
+			this.optionPanel.Controls.Add(this.coursePathTextBox);
+			this.optionPanel.Controls.Add(this.label2);
+			this.optionPanel.Controls.Add(this.dbPathTextBox);
+			this.optionPanel.Controls.Add(this.label1);
+			this.optionPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
+			this.optionPanel.Location = new System.Drawing.Point(0, 572);
+			this.optionPanel.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
+			this.optionPanel.MinimumSize = new System.Drawing.Size(1167, 208);
+			this.optionPanel.Name = "optionPanel";
+			this.optionPanel.Size = new System.Drawing.Size(1233, 255);
+			this.optionPanel.TabIndex = 1;
+			// 
+			// copyImageCheckbox
+			// 
+			this.copyImageCheckbox.AutoSize = true;
+			this.copyImageCheckbox.Location = new System.Drawing.Point(1056, 15);
+			this.copyImageCheckbox.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
+			this.copyImageCheckbox.Name = "copyImageCheckbox";
+			this.copyImageCheckbox.Size = new System.Drawing.Size(135, 29);
+			this.copyImageCheckbox.TabIndex = 18;
+			this.copyImageCheckbox.Text = "Copy Image";
+			this.copyImageCheckbox.UseVisualStyleBackColor = true;
+			// 
+			// deselectAllButton
+			// 
+			this.deselectAllButton.Location = new System.Drawing.Point(956, 105);
+			this.deselectAllButton.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
+			this.deselectAllButton.Name = "deselectAllButton";
+			this.deselectAllButton.Size = new System.Drawing.Size(110, 31);
+			this.deselectAllButton.TabIndex = 14;
+			this.deselectAllButton.Text = "Deselect all";
+			this.deselectAllButton.UseVisualStyleBackColor = true;
+			this.deselectAllButton.Click += new System.EventHandler(this.deselectAllButton_Click);
+			// 
+			// selectAllButton
+			// 
+			this.selectAllButton.Location = new System.Drawing.Point(956, 60);
+			this.selectAllButton.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
+			this.selectAllButton.Name = "selectAllButton";
+			this.selectAllButton.Size = new System.Drawing.Size(110, 31);
+			this.selectAllButton.TabIndex = 13;
+			this.selectAllButton.Text = "Select all";
+			this.selectAllButton.UseVisualStyleBackColor = true;
+			this.selectAllButton.Click += new System.EventHandler(this.selectAllButton_Click);
+			// 
+			// openOutputButton
+			// 
+			this.openOutputButton.Location = new System.Drawing.Point(834, 105);
+			this.openOutputButton.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
+			this.openOutputButton.Name = "openOutputButton";
+			this.openOutputButton.Size = new System.Drawing.Size(110, 31);
+			this.openOutputButton.TabIndex = 16;
+			this.openOutputButton.Text = "Open folder";
+			this.openOutputButton.UseVisualStyleBackColor = true;
+			this.openOutputButton.Click += new System.EventHandler(this.openOutputButton_Click);
+			// 
+			// openDbButton
+			// 
+			this.openDbButton.Location = new System.Drawing.Point(834, 60);
+			this.openDbButton.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
+			this.openDbButton.Name = "openDbButton";
+			this.openDbButton.Size = new System.Drawing.Size(110, 31);
+			this.openDbButton.TabIndex = 17;
+			this.openDbButton.Text = "Open";
+			this.openDbButton.UseVisualStyleBackColor = true;
+			this.openDbButton.Click += new System.EventHandler(this.openDbButton_Click);
+			// 
+			// deleteCheckBox
+			// 
+			this.deleteCheckBox.AutoSize = true;
+			this.deleteCheckBox.Checked = true;
+			this.deleteCheckBox.CheckState = System.Windows.Forms.CheckState.Checked;
+			this.deleteCheckBox.Location = new System.Drawing.Point(956, 17);
+			this.deleteCheckBox.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
+			this.deleteCheckBox.Name = "deleteCheckBox";
+			this.deleteCheckBox.Size = new System.Drawing.Size(88, 29);
+			this.deleteCheckBox.TabIndex = 8;
+			this.deleteCheckBox.Text = "Delete";
+			this.formToolTip.SetToolTip(this.deleteCheckBox, "Delete course after decrypting");
+			this.deleteCheckBox.UseVisualStyleBackColor = true;
+			// 
+			// createSubCheckBox
+			// 
+			this.createSubCheckBox.AutoSize = true;
+			this.createSubCheckBox.Checked = true;
+			this.createSubCheckBox.CheckState = System.Windows.Forms.CheckState.Checked;
+			this.createSubCheckBox.Location = new System.Drawing.Point(834, 17);
+			this.createSubCheckBox.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
+			this.createSubCheckBox.Name = "createSubCheckBox";
+			this.createSubCheckBox.Size = new System.Drawing.Size(122, 29);
+			this.createSubCheckBox.TabIndex = 7;
+			this.createSubCheckBox.Text = "Create sub";
+			this.formToolTip.SetToolTip(this.createSubCheckBox, "Create subtitles from course, if available");
+			this.createSubCheckBox.UseVisualStyleBackColor = true;
+			// 
+			// outputButton
+			// 
+			this.outputButton.Location = new System.Drawing.Point(712, 105);
+			this.outputButton.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
+			this.outputButton.Name = "outputButton";
+			this.outputButton.Size = new System.Drawing.Size(110, 31);
+			this.outputButton.TabIndex = 5;
+			this.outputButton.Text = "Browse...";
+			this.outputButton.UseVisualStyleBackColor = true;
+			this.outputButton.Click += new System.EventHandler(this.outputPathButton_Click);
+			// 
+			// label3
+			// 
+			this.label3.AutoSize = true;
+			this.label3.Location = new System.Drawing.Point(72, 108);
+			this.label3.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+			this.label3.Name = "label3";
+			this.label3.Size = new System.Drawing.Size(73, 25);
+			this.label3.TabIndex = 11;
+			this.label3.Text = "Output:";
+			// 
+			// outputPathTextBox
+			// 
+			this.outputPathTextBox.Location = new System.Drawing.Point(157, 105);
+			this.outputPathTextBox.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
+			this.outputPathTextBox.Name = "outputPathTextBox";
+			this.outputPathTextBox.Size = new System.Drawing.Size(543, 31);
+			this.outputPathTextBox.TabIndex = 2;
+			// 
+			// pnlMain
+			// 
+			this.pnlMain.Controls.Add(this.pnlCourse);
+			this.pnlMain.Controls.Add(this.optionPanel);
+			this.pnlMain.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.pnlMain.Location = new System.Drawing.Point(6, 7);
+			this.pnlMain.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
+			this.pnlMain.MinimumSize = new System.Drawing.Size(0, 827);
+			this.pnlMain.Name = "pnlMain";
+			this.pnlMain.Size = new System.Drawing.Size(1233, 827);
+			this.pnlMain.TabIndex = 12;
+			// 
+			// pnlCourse
+			// 
+			this.pnlCourse.Controls.Add(this.courseListView);
+			this.pnlCourse.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.pnlCourse.Location = new System.Drawing.Point(0, 0);
+			this.pnlCourse.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
+			this.pnlCourse.Name = "pnlCourse";
+			this.pnlCourse.Size = new System.Drawing.Size(1233, 572);
+			this.pnlCourse.TabIndex = 11;
+			// 
+			// logRichTextBox
+			// 
+			this.logRichTextBox.BackColor = System.Drawing.Color.Black;
+			this.logRichTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+			this.logRichTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.logRichTextBox.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+			this.logRichTextBox.ForeColor = System.Drawing.SystemColors.Info;
+			this.logRichTextBox.Location = new System.Drawing.Point(0, 0);
+			this.logRichTextBox.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
+			this.logRichTextBox.Name = "logRichTextBox";
+			this.logRichTextBox.ReadOnly = true;
+			this.logRichTextBox.ShortcutsEnabled = false;
+			this.logRichTextBox.ShowSelectionMargin = true;
+			this.logRichTextBox.Size = new System.Drawing.Size(666, 714);
+			this.logRichTextBox.TabIndex = 1;
+			this.logRichTextBox.TabStop = false;
+			this.logRichTextBox.Text = "https://github.com/sitiom/PluralCrypt\n\n";
+			this.logRichTextBox.LinkClicked += new System.Windows.Forms.LinkClickedEventHandler(this.logRichTextBox_LinkClicked);
+			// 
+			// bgwDecrypt
+			// 
+			this.bgwDecrypt.WorkerReportsProgress = true;
+			this.bgwDecrypt.WorkerSupportsCancellation = true;
+			// 
+			// bgwGetCourse
+			// 
+			this.bgwGetCourse.WorkerReportsProgress = true;
+			this.bgwGetCourse.WorkerSupportsCancellation = true;
+			// 
+			// formLayoutPanel
+			// 
+			this.formLayoutPanel.ColumnCount = 2;
+			this.formLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+			this.formLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+			this.formLayoutPanel.Controls.Add(this.pnlMain, 0, 0);
+			this.formLayoutPanel.Controls.Add(this.panel1, 1, 0);
+			this.formLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.formLayoutPanel.Location = new System.Drawing.Point(0, 0);
+			this.formLayoutPanel.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
+			this.formLayoutPanel.Name = "formLayoutPanel";
+			this.formLayoutPanel.RowCount = 1;
+			this.formLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+			this.formLayoutPanel.Size = new System.Drawing.Size(1917, 724);
+			this.formLayoutPanel.TabIndex = 13;
+			// 
+			// panel1
+			// 
+			this.panel1.Controls.Add(this.logRichTextBox);
+			this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.panel1.Location = new System.Drawing.Point(1249, 5);
+			this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+			this.panel1.Name = "panel1";
+			this.panel1.Size = new System.Drawing.Size(666, 714);
+			this.panel1.TabIndex = 13;
+			// 
+			// bottomStatusStrip
+			// 
+			this.bottomStatusStrip.ImageScalingSize = new System.Drawing.Size(24, 24);
+			this.bottomStatusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tslToolVersion,
             this.tslPOPVersion});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 1);
-            this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Padding = new System.Windows.Forms.Padding(1, 0, 16, 0);
-            this.statusStrip1.Size = new System.Drawing.Size(1348, 24);
-            this.statusStrip1.SizingGrip = false;
-            this.statusStrip1.TabIndex = 14;
-            this.statusStrip1.Text = "statusStrip1";
-            // 
-            // tslToolVersion
-            // 
-            this.tslToolVersion.BorderSides = System.Windows.Forms.ToolStripStatusLabelBorderSides.Left;
-            this.tslToolVersion.BorderStyle = System.Windows.Forms.Border3DStyle.Etched;
-            this.tslToolVersion.Name = "tslToolVersion";
-            this.tslToolVersion.Size = new System.Drawing.Size(77, 19);
-            this.tslToolVersion.Text = "Tool Version:";
-            // 
-            // tslPOPVersion
-            // 
-            this.tslPOPVersion.Name = "tslPOPVersion";
-            this.tslPOPVersion.Size = new System.Drawing.Size(181, 19);
-            this.tslPOPVersion.Text = "Pluralsight Offline Player Version:";
-            // 
-            // pnl1
-            // 
-            this.pnl1.Controls.Add(this.tableLayoutPanel1);
-            this.pnl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnl1.Location = new System.Drawing.Point(0, 0);
-            this.pnl1.Margin = new System.Windows.Forms.Padding(4);
-            this.pnl1.Name = "pnl1";
-            this.pnl1.Size = new System.Drawing.Size(1348, 516);
-            this.pnl1.TabIndex = 15;
-            // 
-            // pnl2
-            // 
-            this.pnl2.Controls.Add(this.statusStrip1);
-            this.pnl2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnl2.Location = new System.Drawing.Point(0, 516);
-            this.pnl2.Margin = new System.Windows.Forms.Padding(4);
-            this.pnl2.Name = "pnl2";
-            this.pnl2.Size = new System.Drawing.Size(1348, 25);
-            this.pnl2.TabIndex = 16;
-            // 
-            // tlsHelp
-            // 
-            this.tlsHelp.Name = "tlsHelp";
-            this.tlsHelp.Size = new System.Drawing.Size(23, 23);
-            // 
-            // MainForm
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1348, 541);
-            this.Controls.Add(this.pnl1);
-            this.Controls.Add(this.pnl2);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.KeyPreview = true;
-            this.Margin = new System.Windows.Forms.Padding(4);
-            this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(1364, 580);
-            this.MinimumSize = new System.Drawing.Size(1364, 580);
-            this.Name = "MainForm";
-            this.Text = "PluralCrypt";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmMain_FormClosing);
-            this.pnlOption.ResumeLayout(false);
-            this.pnlOption.PerformLayout();
-            this.pnlMain.ResumeLayout(false);
-            this.pnlCourse.ResumeLayout(false);
-            this.tableLayoutPanel1.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
-            this.statusStrip1.ResumeLayout(false);
-            this.statusStrip1.PerformLayout();
-            this.pnl1.ResumeLayout(false);
-            this.pnl2.ResumeLayout(false);
-            this.pnl2.PerformLayout();
-            this.ResumeLayout(false);
+			this.bottomStatusStrip.Location = new System.Drawing.Point(0, 6);
+			this.bottomStatusStrip.Name = "bottomStatusStrip";
+			this.bottomStatusStrip.Padding = new System.Windows.Forms.Padding(1, 0, 23, 0);
+			this.bottomStatusStrip.Size = new System.Drawing.Size(1917, 36);
+			this.bottomStatusStrip.SizingGrip = false;
+			this.bottomStatusStrip.TabIndex = 14;
+			this.bottomStatusStrip.Text = "statusStrip1";
+			// 
+			// tslToolVersion
+			// 
+			this.tslToolVersion.BorderSides = System.Windows.Forms.ToolStripStatusLabelBorderSides.Left;
+			this.tslToolVersion.BorderStyle = System.Windows.Forms.Border3DStyle.Etched;
+			this.tslToolVersion.Name = "tslToolVersion";
+			this.tslToolVersion.Size = new System.Drawing.Size(116, 29);
+			this.tslToolVersion.Text = "Tool Version:";
+			// 
+			// tslPOPVersion
+			// 
+			this.tslPOPVersion.Name = "tslPOPVersion";
+			this.tslPOPVersion.Size = new System.Drawing.Size(271, 29);
+			this.tslPOPVersion.Text = "Pluralsight Offline Player Version:";
+			// 
+			// pnl1
+			// 
+			this.pnl1.Controls.Add(this.formLayoutPanel);
+			this.pnl1.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.pnl1.Location = new System.Drawing.Point(0, 0);
+			this.pnl1.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
+			this.pnl1.Name = "pnl1";
+			this.pnl1.Size = new System.Drawing.Size(1917, 724);
+			this.pnl1.TabIndex = 15;
+			// 
+			// pnl2
+			// 
+			this.pnl2.Controls.Add(this.bottomStatusStrip);
+			this.pnl2.Dock = System.Windows.Forms.DockStyle.Bottom;
+			this.pnl2.Location = new System.Drawing.Point(0, 724);
+			this.pnl2.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
+			this.pnl2.Name = "pnl2";
+			this.pnl2.Size = new System.Drawing.Size(1917, 42);
+			this.pnl2.TabIndex = 16;
+			// 
+			// tlsHelp
+			// 
+			this.tlsHelp.Name = "tlsHelp";
+			this.tlsHelp.Size = new System.Drawing.Size(23, 23);
+			// 
+			// MainForm
+			// 
+			this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
+			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+			this.AutoSize = true;
+			this.ClientSize = new System.Drawing.Size(1917, 766);
+			this.Controls.Add(this.pnl1);
+			this.Controls.Add(this.pnl2);
+			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+			this.KeyPreview = true;
+			this.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
+			this.MaximizeBox = false;
+			this.Name = "MainForm";
+			this.Text = "PluralCrypt";
+			this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
+			this.optionPanel.ResumeLayout(false);
+			this.optionPanel.PerformLayout();
+			this.pnlMain.ResumeLayout(false);
+			this.pnlCourse.ResumeLayout(false);
+			this.formLayoutPanel.ResumeLayout(false);
+			this.panel1.ResumeLayout(false);
+			this.bottomStatusStrip.ResumeLayout(false);
+			this.bottomStatusStrip.PerformLayout();
+			this.pnl1.ResumeLayout(false);
+			this.pnl2.ResumeLayout(false);
+			this.pnl2.PerformLayout();
+			this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.ListView lsvCourse;
+        private System.Windows.Forms.ListView courseListView;
         private System.Windows.Forms.ImageList imgList;
-        private System.Windows.Forms.Button btnReadCourse;
-        private System.Windows.Forms.Button btnDecypt;
-        private System.Windows.Forms.TextBox txtCoursePath;
-        private System.Windows.Forms.TextBox txtDBPath;
+        private System.Windows.Forms.Button readButton;
+        private System.Windows.Forms.Button runButton;
+        private System.Windows.Forms.TextBox coursePathTextBox;
+        private System.Windows.Forms.TextBox dbPathTextBox;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button btnCoursePath;
-        private System.Windows.Forms.Button btnDBPath;
-        private System.Windows.Forms.Panel pnlOption;
-        private System.Windows.Forms.Button btnOutput;
+        private System.Windows.Forms.Button coursePathButton;
+        private System.Windows.Forms.Button dbPathButton;
+        private System.Windows.Forms.Panel optionPanel;
+        private System.Windows.Forms.Button outputButton;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtOutputPath;
-        private System.Windows.Forms.CheckBox chkCreateSub;
+        private System.Windows.Forms.TextBox outputPathTextBox;
+        private System.Windows.Forms.CheckBox createSubCheckBox;
         private System.Windows.Forms.Panel pnlMain;
         private System.Windows.Forms.Panel pnlCourse;
         private System.ComponentModel.BackgroundWorker bgwDecrypt;
         private System.ComponentModel.BackgroundWorker bgwGetCourse;
-        private System.Windows.Forms.CheckBox chkDelete;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.CheckBox chkDecrypt;
-        private System.Windows.Forms.Button btnOpenOutput;
-        private System.Windows.Forms.Button btnOpenDB;
-        private System.Windows.Forms.CheckBox chkStartModuleIndexAt1;
-        private System.Windows.Forms.CheckBox chkStartClipIndexAt1;
-        private System.Windows.Forms.CheckBox chkShowErrOnly;
-        private System.Windows.Forms.Button btnDeselectAll;
-        private System.Windows.Forms.Button btnSelectAll;
-        private System.Windows.Forms.ToolTip toolTip1;
-        private System.Windows.Forms.CheckBox chkCopyImage;
-        private System.Windows.Forms.StatusStrip statusStrip1;
+        private System.Windows.Forms.CheckBox deleteCheckBox;
+        private System.Windows.Forms.TableLayoutPanel formLayoutPanel;
+        private System.Windows.Forms.Button openOutputButton;
+        private System.Windows.Forms.Button openDbButton;
+        private System.Windows.Forms.Button deselectAllButton;
+        private System.Windows.Forms.Button selectAllButton;
+        private System.Windows.Forms.ToolTip formToolTip;
+        private System.Windows.Forms.CheckBox copyImageCheckbox;
+        private System.Windows.Forms.StatusStrip bottomStatusStrip;
         private System.Windows.Forms.Panel pnl1;
         private System.Windows.Forms.Panel pnl2;
         private System.Windows.Forms.ToolStripStatusLabel tslToolVersion;
         private System.Windows.Forms.ToolStripStatusLabel tslPOPVersion;
         private System.Windows.Forms.ToolStripDropDownButton tlsHelp;
-        private System.Windows.Forms.RichTextBox rtbLog;
+        private System.Windows.Forms.RichTextBox logRichTextBox;
         private System.Windows.Forms.Panel panel1;
     }
 }
