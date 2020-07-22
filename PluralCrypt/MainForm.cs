@@ -37,6 +37,18 @@ namespace PluralCrypt
 			{
 				_appSetting = JsonConvert.DeserializeObject<AppSetting>(File.ReadAllText("settings.json"));
 
+				if (_appSetting.CoursePath == string.Empty)
+				{
+					_appSetting.CoursePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData),
+						"Pluralsight","courses");
+				}
+
+				if (_appSetting.DatabasePath == string.Empty)
+				{
+					_appSetting.DatabasePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData),
+						"Pluralsight","pluralsight.db");
+				}
+
 				coursePathTextBox.Text = Directory.Exists(_appSetting.CoursePath) ? _appSetting.CoursePath : string.Empty;
 				dbPathTextBox.Text = File.Exists(_appSetting.DatabasePath) ? _appSetting.DatabasePath : string.Empty;
 				outputPathTextBox.Text = Directory.Exists(_appSetting.OutputPath) ? _appSetting.OutputPath : string.Empty;
