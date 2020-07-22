@@ -6,7 +6,7 @@ This application is a fork of https://github.com/mrvogiacu/Decrypt-PluralSight-V
 
 ## Prerequisites
 
-* This tool requires .Net Core `3.1`.
+* .NET Core `3.1`.
 
 ## Installation
 
@@ -16,12 +16,12 @@ This application is a fork of https://github.com/mrvogiacu/Decrypt-PluralSight-V
 ## Usage
 
 1. Select the course path and DB file. Default Pluralsight path is `%LOCALAPPDATA%\Pluralsight\courses`.
-2. After selecting the output path, select `Read course`.
+2. After selecting the output path, select `Read`.
 3. Select the courses to decrypt or press the `Select all` button.
-4. After selecting your preferred options, `Run` and wait for the decryption process to finish.
+4. Tick the necessary options, then select `Run` and wait for the decryption process to finish.
 
 **Notes:**
-+ Do not  remove the course from the Pluralsight Offine Player before, and during decryption.
++ Don't remove the course from the Pluralsight Offine Player before, and during decryption.
 + Some courses don't have subtitles.
 
 ## Author
